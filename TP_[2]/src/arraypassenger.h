@@ -1,13 +1,13 @@
 #ifndef ARRAYPASSENGER_H_
 #define ARRAYPASSENGER_H_
 
-typedef struct
-{
-	int id;
-	char description[30];
-}typePassenger;
+#include "string.h"
+#include "typePassenger.h"
 
-struct
+#define LIBRE 0
+#define OCUPADO 1
+
+typedef struct
 {
 	int id;
 	char name[51];
@@ -17,7 +17,7 @@ struct
 	int idTypePassenger;
 	int statusFlight;
 	int isEmpty;
-}typedef Passenger;
+}Passenger;
 
 /** \brief To indicate that all position in the array are empty,
 * this function put the flag (isEmpty) in TRUE in all
@@ -25,6 +25,7 @@ struct
 * \param list Passenger* Pointer to array of passenger
 * \param len int Array length
 * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
+*
 */
 int initPassengers(Passenger list[], int len);
 
@@ -40,9 +41,8 @@ int initPassengers(Passenger list[], int len);
 * \param typePassenger int
 * \param flycode[] char
 * \return int Return (-1) if Error [Invalid length or NULL pointer or without
-free space] - (0) if Ok
-*/
-Passenger addPassenger(Passenger list[], int len, typePassenger types[], int lenType);
+free space] - (0) if Ok*/
+int addPassenger(Passenger list[], int len, int id, char name[],char lastName[],float price,int typePassenger, char flyCode[], int statusFlight);
 
 
 /** \brief find a Passenger by Id en returns the index position in array.
@@ -78,7 +78,7 @@ indicate UP or DOWN order
 * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
 *
 */
-int sortPassengers(Passenger list[], int len, typePassenger types[], int order);
+int sortPassengers(Passenger list[], int len, int order);
 
 
 /** \brief print the content of passengers array
@@ -88,7 +88,7 @@ int sortPassengers(Passenger list[], int len, typePassenger types[], int order);
 * \return int
 *
 */
-int printPassenger(Passenger list[], int length, typePassenger types[]);
+int printPassenger(Passenger list[], int length, TypePassenger listTypes[], int lenType);
 
 
 /** \brief Sort the elements in the array of passengers, the argument order
@@ -100,7 +100,10 @@ indicate UP or DOWN order
 * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
 *
 */
-int sortPassengersByCode(Passenger* list, int len, int order);
+int sortPassengersByCode(Passenger list[], int len, int order);
 
+void printOnePassenger(Passenger onePassenger, TypePassenger oneType);
+
+int BuscarEspacioLibre(Passenger list[], int len);
 
 #endif
