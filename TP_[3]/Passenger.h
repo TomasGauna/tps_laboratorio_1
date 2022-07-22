@@ -1,8 +1,12 @@
 #ifndef PASSENGER_H_
 #define PASSENGER_H_
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "Controller.h"
+#include "LinkedList.h"
+#include "Biblioteca_Propia.h"
+#include "utn.h"
 
 typedef struct
 {
@@ -10,14 +14,14 @@ typedef struct
 	char nombre[50];
 	char apellido[50];
 	float precio;
-	char tipoPasajero[20];
-	char codigoVuelo[20];
-	char estadoVuelo[20];
+	char estadoVuelo[50];
+	char tipoPasajero[50];
+	char codigoVuelo[50];
 }Passenger;
 
 Passenger* Passenger_new();
-Passenger* Passenger_newParametros(char* idStr,char* nombreStr,char* apellidoStr,char* precioStr,char* tipoPasajeroStr,char* codigoStr, char* estadoStr);
-void Passenger_delete(Passenger* this);
+Passenger* Passenger_newParametros(char* idStr,char* nombreStr,char* tipoPasajeroStr, char* apellidoStr, char* codigoStr, char* precioStr, char* estadoStr);
+void Passenger_delete();
 
 int Passenger_setId(Passenger* this,int id);
 int Passenger_getId(Passenger* this,int* id);
@@ -40,10 +44,6 @@ int Passenger_getPrecio(Passenger* this,float* precio);
 int Passenger_setEstadoVuelo(Passenger* this,char* estadoVuelo);
 int Passenger_getEstadoVuelo(Passenger* this,char* estadoVuelo);
 
-int Passenger_CompareByName(void* p1, void* p2);//1 de a-z y 0 de z-a
-int Passenger_CompareById(void* p1, void* p2);
-
-void Passenger_printOne(Passenger* unVuelo);
-int Passenger_printListPassenger(LinkedList* pArrayListPassenger);
+int Passenger_EditPassenger(Passenger* this);
 
 #endif

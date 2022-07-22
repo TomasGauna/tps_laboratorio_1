@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Passenger.h"
-
+#include "parser.h"
 
 int controller_loadFromText(char* path , LinkedList* pArrayListPassenger);
 int controller_loadFromBinary(char* path , LinkedList* pArrayListPassenger);
