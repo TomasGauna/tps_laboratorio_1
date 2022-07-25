@@ -39,7 +39,6 @@ Passenger* Passenger_newParametros(char* idStr,char* nombreStr,char* tipoPasajer
 			   || Passenger_setTipoPasajero(unVuelo, tipoPasajeroStr) == -1 || Passenger_setCodigoVuelo(unVuelo, codigoStr) == -1 || Passenger_setEstadoVuelo(unVuelo, estadoStr) == -1)
 			{
 				Passenger_delete(unVuelo);
-				unVuelo = NULL;
 			}
 		}
 	}

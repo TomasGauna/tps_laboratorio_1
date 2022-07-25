@@ -261,7 +261,7 @@ int EnlistPassenger(LinkedList* pArrayPassenger, int index)
 		   Passenger_getCodigoVuelo(unVuelo, codigoVuelo) == 1 && Passenger_getPrecio(unVuelo, &precio) == 1
 		   && Passenger_getEstadoVuelo(unVuelo, estadoVuelo) == 1 && Passenger_getTipoPasajero(unVuelo, tipoPasajero) == 1)
 		{
-			printf("|%-5d | %-18s | %-18s | %-9.2f | %-18s | %-18s | %-8s|\n", id, nombre, apellido, precio, codigoVuelo, tipoPasajero, estadoVuelo);//arreglar, muestra MAL
+			printf("|%-5d | %-18s | %-18s | %-9.2f | %-18s | %-18s | %-8s|\n", id, nombre, apellido, precio, codigoVuelo, tipoPasajero, estadoVuelo);
 			valido = 1;
 		}
 	}
@@ -296,12 +296,12 @@ int EliminarPasajero(LinkedList* pArrayListPassenger, int id)
 			{
 				case 1:
 					ll_remove(pArrayListPassenger, index);
-					printf("\nSe ha realizado la baja con exito.");
+					printf("\nSe ha realizado la baja con exito\n");
 					valido = 1;
 				break;
 
 				case 2:
-					printf("\nSe ha cancelado la baja.");
+					printf("\nSe ha cancelado la baja\n");
 				break;
 			}
 		}
@@ -346,7 +346,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma descendente");
+	 			printf("\nSe ordeno el listado por ID de forma descendente\n");
 	 		}
 	 		else
 	 		{
@@ -355,7 +355,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma ascendente");
+	 			printf("\nSe ordeno el listado por ID de forma ascendente\n");
 	 		}
 	 	break;
 
@@ -369,7 +369,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma descendente");
+	 			printf("\nSe ordeno el listado por ID de forma descendente\n");
 	 		}
 	 		else
 	 		{
@@ -378,7 +378,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma ascendente");
+	 			printf("\nSe ordeno el listado por ID de forma ascendente\n");
 	 		}
 	 	break;
 
@@ -392,7 +392,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma descendente");
+	 			printf("\nSe ordeno el listado por ID de forma descendente\n");
 	 		}
 	 		else
 	 		{
@@ -401,7 +401,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma ascendente");
+	 			printf("\nSe ordeno el listado por ID de forma ascendente\n");
 	 		}
 	 	break;
 
@@ -424,7 +424,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma ascendente");
+	 			printf("\nSe ordeno el listado por ID de forma ascendente\n");
 	 		}
 	 	break;
 
@@ -440,7 +440,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 		 				ll_deleteLinkedList(aux);
 		 				printf("\nLista mostrada con exito\n");
 		 			}
-		 			printf("Se ordeno el listado por ID de forma descendente");
+		 			printf("\nSe ordeno el listado por ID de forma descendente\n");
 		 		}
 		 		else
 		 		{
@@ -449,7 +449,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 		 				ll_deleteLinkedList(aux);
 		 				printf("\nLista mostrada con exito\n");
 		 			}
-		 			printf("Se ordeno el listado por ID de forma ascendente");
+		 			printf("\nSe ordeno el listado por ID de forma ascendente\n");
 		 		}
 	 		}
 	 	break;
@@ -464,7 +464,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma descendente");
+	 			printf("\nSe ordeno el listado por ID de forma descendente\n");
 	 		}
 	 		else
 	 		{
@@ -473,7 +473,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma ascendente");
+	 			printf("\nSe ordeno el listado por ID de forma ascendente\n");
 	 		}
 	 	break;
 
@@ -487,7 +487,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma descendente");
+	 			printf("\nSe ordeno el listado por ID de forma descendente\n");
 	 		}
 	 		else
 	 		{
@@ -496,7 +496,7 @@ int MostrarListadoOrdenado(LinkedList* pArrayListPassenger, int opcionElegida)
 	 				ll_deleteLinkedList(aux);
 	 				printf("\nLista mostrada con exito\n");
 	 			}
-	 			printf("Se ordeno el listado por ID de forma ascendente");
+	 			printf("\nSe ordeno el listado por ID de forma ascendente\n");
 	 		}
 	 	break;
 
@@ -514,11 +514,11 @@ int DeterminarCriterio()
 	char aux[50];
 	int valido;
 
-	valido = getStringNumeros("\n< CRITERIOS DE ORDENAMIENTO >\n0.Descendente\n1.Ascendente\nElija una opcion: ", aux);
+	valido = getStringNumeros("\n< CRITERIOS DE ORDENAMIENTO >\n0.Ascendente\n1.Descendente\nElija una opcion: ", aux);
 	criterio = atoi(aux);
 	while(valido != 1 || (criterio != 1 && criterio != 0))
 	{
-		valido = getStringNumeros("\n|ERROR|\n< CRITERIOS DE ORDENAMIENTO >\n0.Descendente\n1.Ascendente\nElija una opcion correcta: ", aux);
+		valido = getStringNumeros("\n|ERROR|\n< CRITERIOS DE ORDENAMIENTO >\n0.Ascendente\n1.Descendente\nElija una opcion correcta: ", aux);
 		criterio = atoi(aux);
 	}
 

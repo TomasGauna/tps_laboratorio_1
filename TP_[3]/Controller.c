@@ -160,7 +160,7 @@ int controller_ListPassenger(LinkedList* pArrayListPassenger)
 		if(cantidad > 0)
 		{
 			printf("\n< LISTADO DE PASAJEROS >");
-			printf("\nID	Nombre		     Apellido	          Tipo de pasajero     Codigo       Estado 	    Precio \n");
+			printf("\n ID	 Nombre		      Apellido	           Precio      Tipo de pasajero     Codigo               Estado\n");
 			for(int i = 0; i < cantidad; i++)
 			{
 				valido = EnlistPassenger(pArrayListPassenger, i);
